@@ -1,14 +1,11 @@
 <?php
+
+$show_score = FALSE;
 // Start the session
 session_start();
-$_SESSION['correct_answers'] = null;
-
 
 // Include questions from the questions.php file
 include 'generate_questions.php';
-
-// Make a variable to hold the total number of questions to ask
-$num_questions = count($_SESSION['question_set']);
 
 // Make a variable to determine if the score will be shown or not. Set it to false.
 
@@ -18,16 +15,18 @@ $show_score = FALSE;
 
 $index = null;
 
+$_SESSION['toast'] = null;
+
 // Make a variable to hold the current question. Assign null to it.
-$toast = '';
+$_SESSION['toast'] = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($_POST['answer'] == $_SESSION['current_question']['correctAnswer']) {
-        $toast = 'Yaaas, you got it!';
-        $_SESSION['correct_answers'] ++;
+        $_SESSION['toast'] = 'Yaaas, you got it!';
+        $_SESSION['total_correct'] ++;
 
     } else {
-        $toast = 'wrong answer McFly';
+        $_SESSION['toast'] = 'wrong answer McFly';
     }
 }
 
@@ -35,6 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 if (array_key_exists('questions_asked', $_SESSION) === FALSE) {
     $_SESSION['questions_asked'] = [];
     $show_score = FALSE;
+    $_SESSION['question_set'] = generateQuestions();
+    $num_questions = count($_SESSION['question_set']);
 }
 
 
@@ -50,19 +51,29 @@ function generateNewQuestion() {
 if (count($_SESSION['questions_asked']) == $num_questions) {
     $_SESSION['questions_asked'] = [];
     $show_score = TRUE;
-} elseif (count($_SESSION['questions_asked']) == 0) {
+} else {
     $show_score = FALSE;
-    $_SESSION['total_correct'] = 0;
-    $toast = '';
-    generateNewQuestion();
-} elseif (count($_SESSION['questions_asked']) !== $num_questions && $_SERVER['REQUEST_METHOD'] === 'POST') {
-    echo 'ran';
+    if (count($_SESSION['questions_asked']) == 0) {
+        $_SESSION['total_correct'] = 0;
+        $toast = '';
+    }
     generateNewQuestion();
 }
+
+//    if (count($_SESSION['questions_asked']) == 0) {
+//    $show_score = FALSE;
+//    $_SESSION['total_correct'] = 0;
+//    $toast = '';
+//    generateNewQuestion();
+//} elseif (count($_SESSION['questions_asked']) !== $num_questions && $_SERVER['REQUEST_METHOD'] === 'POST') {
+//    generateNewQuestion();
+//}
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header("Location: " . $_SERVER['REQUEST_URI']);
     exit();
 }
+
+session_destroy();
 
