@@ -1,7 +1,6 @@
 <?php
 // Generate random questions
 
-if ($_GET) {
 //generate random answers within + or - 10 of correct answer, and ensure they aren't same as correct answer
     function generateRandomAnswer($correct_answer)
     {
@@ -52,5 +51,3 @@ if ($_GET) {
 
         return $question_set;
     }
-
-}

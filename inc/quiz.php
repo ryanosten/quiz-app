@@ -7,6 +7,10 @@ session_start();
 // Include questions from the questions.php file
 include 'generate_questions.php';
 
+if (isset($_SESSION['toast'])) {
+    var_dump($_SESSION['toast']);
+}
+
 // Make a variable to determine if the score will be shown or not. Set it to false.
 
 $show_score = FALSE;
@@ -15,10 +19,8 @@ $show_score = FALSE;
 
 $index = null;
 
-$_SESSION['toast'] = null;
-
 // Make a variable to hold the current question. Assign null to it.
-$_SESSION['toast'] = '';
+//$_SESSION['toast'] = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($_POST['answer'] == $_SESSION['current_question']['correctAnswer']) {
@@ -35,7 +37,8 @@ if (array_key_exists('questions_asked', $_SESSION) === FALSE) {
     $_SESSION['questions_asked'] = [];
     $show_score = FALSE;
     $_SESSION['question_set'] = generateQuestions();
-    $num_questions = count($_SESSION['question_set']);
+    $_SESSION['num_questions'] = count($_SESSION['question_set']);
+
 }
 
 
@@ -48,7 +51,7 @@ function generateNewQuestion() {
 }
 
 
-if (count($_SESSION['questions_asked']) == $num_questions) {
+if (count($_SESSION['questions_asked']) == $_SESSION['num_questions']) {
     $_SESSION['questions_asked'] = [];
     $show_score = TRUE;
 } else {
