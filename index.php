@@ -18,6 +18,7 @@ shuffle($answers);
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 <body>
     <div class="container">
@@ -30,11 +31,11 @@ shuffle($answers);
                 <?php
                 if (isset($_SESSION['toast'])){
                     ?>
-                    <span><?= $_SESSION['toast'] ?></span>
+                    <span class="toast animated pulse"><?= $_SESSION['toast'] ?></span>
                     <?php
                 }
                 ?>
-                <p class="breadcrumbs">Question <?= count($_SESSION['questions_asked']) ?> of <?= $_SESSION['num_questions'] ?>?</p>
+                <p class="breadcrumbs">Question <?= $_SESSION['question_number'] ?> of <?= $_SESSION['num_questions'] ?>?</p>
                 <p class="quiz">What is <?= $_SESSION['current_question']['leftAdder'] ?>
                     + <?= $_SESSION['current_question']['rightAdder'] ?>?</p>
                 <form action="index.php" method="post">
@@ -48,7 +49,8 @@ shuffle($answers);
             ?>
             <?php
                 if ($show_score == TRUE) {
-                    echo '<p> You got' . $_SESSION['total_correct'] . 'of' . $_SESSION['num_questions'] . '</p>';
+                    echo '<h1> You got ' . $_SESSION['total_correct'] . ' of ' . $_SESSION['num_questions'] . ' correct</h1>';
+                    echo '<button class="btn" onclick="window.location.href=\'index.php\'">Play Again</button>';
                 }
             ?>
         </div>

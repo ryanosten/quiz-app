@@ -68,3 +68,14 @@ body {
 .btn:focus {
   outline: none;
 }
+
+.toast {
+  background-color: darkslateblue;
+  color: white;
+  display: block;
+  border-radius: 5px;
+  line-height: 1.5;
+  text-align: center;
+  width: 180px;
+  height: 25px;
+}
