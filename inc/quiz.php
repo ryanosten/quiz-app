@@ -10,6 +10,7 @@ include 'generate_questions.php';
 
 if (!isset($_SESSION['question_number'])) {
     $show_score = FALSE;
+    $_SESSION['total_correct'] = 0;
     $_SESSION['question_set'] = generateQuestions();
     $_SESSION['num_questions'] = count($_SESSION['question_set']);
     $_SESSION['question_number'] = 1;
@@ -40,13 +41,6 @@ if($_SERVER['REQUEST_METHOD'] === 'GET'){
         unset($_SESSION['question_number']);
         $show_score = TRUE;
         session_destroy();
-    } else {
-        $show_score = FALSE;
-        if ($_SESSION['question_number'] == 0) {
-            $_SESSION['total_correct'] = 0;
-            generateNewQuestion();
-
-        }
     }
 }
 
