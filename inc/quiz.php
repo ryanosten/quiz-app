@@ -1,5 +1,8 @@
 <?php
 
+var_dump(array_column($_SESSION['question_set'], "left_adder"));
+
+
 $show_score = FALSE;
 // Start the session
 session_start();
@@ -17,6 +20,13 @@ if (!isset($_SESSION['question_number'])) {
     generateNewQuestion();
 }
 
+
+if ($_SESSION['question_number'] > $_SESSION['num_questions']) {
+    unset($_SESSION['question_number']);
+    $show_score = TRUE;
+    session_destroy();
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($_POST['answer'] == $_SESSION['current_question']['correctAnswer']) {
         $_SESSION['toast'] = 'Yaaas, you got it!';
@@ -26,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['toast'] = 'wrong answer McFly';
     }
 
-    if($_SESSION['question_number'] !== ($_SESSION['num_questions']+1)){
+    if($_SESSION['question_number'] <= ($_SESSION['num_questions'])){
         generateNewQuestion();
         $_SESSION['question_number']++;
     }
@@ -34,14 +44,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 function generateNewQuestion() {
     $_SESSION['current_question'] = $_SESSION['question_set'][$_SESSION['question_number']];
-}
-
-if($_SERVER['REQUEST_METHOD'] === 'GET'){
-    if ($_SESSION['question_number']-1 == $_SESSION['num_questions']) {
-        unset($_SESSION['question_number']);
-        $show_score = TRUE;
-        session_destroy();
-    }
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
