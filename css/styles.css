@@ -70,7 +70,7 @@ body {
 }
 
 .toast {
-  background-color: darkslateblue;
+  background-color: limegreen;
   color: white;
   display: block;
   border-radius: 5px;
@@ -78,4 +78,12 @@ body {
   text-align: center;
   width: 180px;
   height: 25px;
+}
+
+.red-toast {
+  background-color: orangered;
+}
+
+.green-toast {
+  background-color: forestgreen;
 }

@@ -24,17 +24,22 @@ shuffle($answers);
     <div class="container">
         <div id="quiz-box">
             <?php
-            if ($show_score == FALSE) {
-
-                ?>
-
-                <?php
-                if (isset($_SESSION['toast'])){
-                    ?>
-                    <span class="toast animated pulse"><?= $_SESSION['toast'] ?></span>
-                    <?php
+                if (isset($_SESSION['toast']) AND ($_SESSION['question_correct'] == FALSE)){
+            ?>
+                <span class="toast animated fadeOutUp red-toast delay-1s"><?= $_SESSION['toast'] ?></span>
+            <?php
                 }
-                ?>
+            ?>
+            <?php
+                if (isset($_SESSION['toast']) AND ($_SESSION['question_correct'] == TRUE)){
+            ?>
+                <span class="toast animated fadeOutUp green-toast delay-1s"><?= $_SESSION['toast'] ?></span>
+            <?php
+                }
+            ?>
+            <?php
+                if ($show_score == FALSE) {
+            ?>
                 <p class="breadcrumbs">Question <?= $_SESSION['question_number'] ?> of <?= $_SESSION['num_questions'] ?>?</p>
                 <p class="quiz">What is <?= $_SESSION['current_question']['leftAdder'] ?>
                     + <?= $_SESSION['current_question']['rightAdder'] ?>?</p>
@@ -44,8 +49,8 @@ shuffle($answers);
                     <input type="submit" class="btn" name="answer" value="<?= $answers[1] ?>"/>
                     <input type="submit" class="btn" name="answer" value="<?= $answers[2] ?>"/>
                 </form>
-                <?php
-            }
+            <?php
+                }
             ?>
             <?php
                 if ($show_score == TRUE) {
