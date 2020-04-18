@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="861915e4-180e-44b9-8ede-ecc2b0cf1e49" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/inc/generate_questions.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/generate_questions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/quiz.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/quiz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/generate_questions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+            <state relative-caret-position="465">
+              <caret line="31" column="126" selection-start-line="31" selection-start-column="126" selection-end-line="31" selection-end-column="126" />
             </state>
           </provider>
         </entry>
@@ -29,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+            <state relative-caret-position="575">
+              <caret line="63" column="10" lean-forward="true" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -47,8 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inc/quiz.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+            <state relative-caret-position="322">
+              <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -73,8 +75,8 @@
       <find>correc</find>
       <find>current</find>
       <find>'questions_asked</find>
-      <find>question_num</find>
       <find>answer</find>
+      <find>question_num</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -86,9 +88,9 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/inc/redirect.php" />
         <option value="$PROJECT_DIR$/css/styles.css" />
+        <option value="$PROJECT_DIR$/inc/quiz.php" />
         <option value="$PROJECT_DIR$/inc/generate_questions.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/inc/quiz.php" />
       </list>
     </option>
   </component>
@@ -167,12 +169,12 @@
       <workItem from="1586954719342" duration="33000" />
       <workItem from="1586997023552" duration="7272000" />
       <workItem from="1587083581471" duration="2944000" />
-      <workItem from="1587229834669" duration="7530000" />
+      <workItem from="1587229834669" duration="8755000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57228000" />
+    <option name="totallyTimeSpent" value="58453000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="483" y="33" width="1309" height="823" extended-state="0" />
@@ -248,22 +250,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        <state relative-caret-position="575">
+          <caret line="63" column="10" lean-forward="true" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/generate_questions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+        <state relative-caret-position="465">
+          <caret line="31" column="126" selection-start-line="31" selection-start-column="126" selection-end-line="31" selection-end-column="126" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/quiz.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        <state relative-caret-position="322">
+          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
         </state>
       </provider>
     </entry>

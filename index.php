@@ -1,12 +1,14 @@
 <?php
 include 'inc/quiz.php';
 
+//create an array with the 3 answers for the current question
 $answers = [
         $_SESSION['current_question']['firstIncorrectAnswer'],
         $_SESSION['current_question']['secondIncorrectAnswer'],
         $_SESSION['current_question']['correctAnswer'],
 ];
 
+//randomize the order of the answer array
 shuffle($answers);
 
 ?>
@@ -24,6 +26,7 @@ shuffle($answers);
     <div class="container">
         <div id="quiz-box">
             <?php
+            //these blocks check if toast is set, and whether to show the red toast or green toast depending on accuracy of the answer
                 if (isset($_SESSION['toast']) AND ($_SESSION['question_correct'] == FALSE)){
             ?>
                 <span class="toast animated fadeOutUp red-toast delay-1s"><?= $_SESSION['toast'] ?></span>
@@ -38,6 +41,7 @@ shuffle($answers);
                 }
             ?>
             <?php
+            //if show_score is false, show the normal question HTML
                 if ($show_score == FALSE) {
             ?>
                 <p class="breadcrumbs">Question <?= $_SESSION['question_number'] ?> of <?= $_SESSION['num_questions'] ?>?</p>
@@ -50,10 +54,8 @@ shuffle($answers);
                     <input type="submit" class="btn" name="answer" value="<?= $answers[2] ?>"/>
                 </form>
             <?php
-                }
-            ?>
-            <?php
-                if ($show_score == TRUE) {
+                // if show_score is not set to FALSE, then show the score (end of quiz)
+                } else {
                     echo '<h1> You got ' . $_SESSION['total_correct'] . ' of ' . $_SESSION['num_questions'] . ' correct</h1>';
                     echo '<button class="btn" onclick="window.location.href=\'index.php\'">Play Again</button>';
                 }

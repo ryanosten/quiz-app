@@ -1,7 +1,7 @@
 <?php
 // Generate random questions
 
-//generate random answers within + or - 10 of correct answer, and ensure they aren't same as correct answer
+    //generates random answers within + or - 10 of correct answer, and ensure they aren't same as correct answer
     function generateFirstRandomAnswer($correct_answer) {
         do {
             $randNum = rand(($correct_answer - 10), ($correct_answer + 10));
@@ -10,7 +10,7 @@
         return $randNum;
     }
 
-    // /generate random answers within + or - 10 of correct answer, and ensure they aren't same as correct answer or the first incorrect answer
+    // generates random answers within + or - 10 of correct answer, and ensure they aren't same as correct answer or the first incorrect answer
     function generateSecondRandomAnswer($correct_answer, $first_incorrect_answer) {
         do {
             $randNum = rand(($correct_answer - 10), ($correct_answer + 10));
@@ -19,9 +19,9 @@
         return $randNum;
     }
 
+    //generates a random number to add as an adder and make sure that it doesnt exist in any other questions (so answer is unique)
     function generateAdder($question_set){
 
-        //generate a random number to add as an adder and make sure that it doesnt exist in any other questions (so answer is unique)
         do {
             $randNum = rand(0, 100);
         } while(array_column($question_set, 'leftAdder') == $randNum ?: '0' OR array_column($question_set, 'rightAdder') == $randNum ?: '0');
@@ -29,6 +29,7 @@
         return $randNum;
     }
 
+    //generates the entire question set for the quiz. Number of questions in quiz can be changed by change the number of loops
     function generateQuestions() {
 
         //array to hold the question set
