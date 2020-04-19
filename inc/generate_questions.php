@@ -28,7 +28,7 @@
 
             do {
                 $randNum = rand(0, 100);
-            } while (array_column($question_set, 'leftAdder') == $randNum OR array_column($question_set, 'rightAdder') == $randNum);
+            } while (in_array($randNum, array_column($question_set, 'leftAdder')) OR in_array($randNum, array_column($question_set, 'rightAdder')));
 
             return $randNum;
         }
