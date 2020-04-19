@@ -22,16 +22,11 @@
     //generates a random number to add as an adder and make sure that it doesnt exist in any other questions (so answer is unique)
     function generateAdder($question_set){
 
-        if (count($question_set) == 0) {
-            return rand(0, 100);
-        } else {
-
             do {
                 $randNum = rand(0, 100);
             } while (in_array($randNum, array_column($question_set, 'leftAdder')) OR in_array($randNum, array_column($question_set, 'rightAdder')));
 
-            return $randNum;
-        }
+            return $randNun
     }
 
     //generates the entire question set for the quiz. Number of questions in quiz can be changed by change the number of loops
