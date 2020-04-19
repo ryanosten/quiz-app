@@ -26,7 +26,7 @@
                 $randNum = rand(0, 100);
             } while (in_array($randNum, array_column($question_set, 'leftAdder')) OR in_array($randNum, array_column($question_set, 'rightAdder')));
 
-            return $randNun
+            return $randNum;
     }
 
     //generates the entire question set for the quiz. Number of questions in quiz can be changed by change the number of loops
