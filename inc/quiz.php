@@ -27,18 +27,6 @@ if ($_SESSION['question_number'] > $_SESSION['num_questions']) {
     unset($_SESSION['question_number']);
     //show total score to user
     $show_score = TRUE;
-    //still need to show toast eventthough we are at the end of quiz
-    if ($_SESSION['answer'] == $_SESSION['current_question']['correctAnswer']) {
-        $_SESSION['toast'] = 'You got it!';
-        $_SESSION['question_correct'] = TRUE;
-        $_SESSION['total_correct'] ++;
-        $_SESSION['question_index']++;
-
-    } else {
-        $_SESSION['toast'] = 'Wrong Answer';
-        $_SESSION['question_correct'] = FALSE;
-        $_SESSION['question_index']++;
-    }
     session_destroy();
 }
 
