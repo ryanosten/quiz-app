@@ -1,5 +1,6 @@
 <?php
-include 'inc/quiz.php';
+include (__DIR__ . "/inc/quiz.php");
+include (__DIR__ . "/vendor/autoload.php");
 
 //create an array with the 3 answers for the current question
 $answers = [

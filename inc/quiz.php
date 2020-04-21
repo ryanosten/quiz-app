@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     //generates new question to show on the next page
-    if($_SESSION['question_number'] <= ($_SESSION['num_questions'])){
+    if($_SESSION['question_number'] < ($_SESSION['num_questions'])){
         generateNewQuestion();
     }
 }

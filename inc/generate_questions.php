@@ -55,6 +55,5 @@
             //push the single question into the question_set array
             $question_set[] = $question;
         }
-
         return $question_set;
     }
