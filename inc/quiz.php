@@ -32,7 +32,7 @@ if ($_SESSION['question_number'] > $_SESSION['num_questions']) {
 
 //this block check if we are are not at the beginning of the quiz (eg checks if request method is POST) and handles showing questions if not beginning of quiz
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $_SESSION['answer'] = $_POST['answer'];
+    $_SESSION['answer'] = filter_input(INPUT_POST, "answer");
     //This checks if question is correct or incorrect and shows the appropriate toast. Also it increments the question to prepare for next question
     if ($_SESSION['answer'] == $_SESSION['current_question']['correctAnswer']) {
         $_SESSION['toast'] = 'You Got It!';
