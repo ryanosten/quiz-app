@@ -76,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inc/quiz.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="44" lean-forward="true" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+            <state relative-caret-position="510">
+              <caret line="34" column="87" selection-start-line="34" selection-start-column="87" selection-end-line="34" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -85,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///Applications/MAMP/logs/php_error.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="4983" column="44" lean-forward="true" selection-start-line="4983" selection-start-column="44" selection-end-line="4983" selection-end-column="44" />
+            <state relative-caret-position="74745">
+              <caret line="4983" column="44" selection-start-line="4983" selection-start-column="44" selection-end-line="4983" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -130,8 +130,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="693" />
-    <option name="y" value="23" />
+    <option name="x" value="551" />
+    <option name="y" value="63" />
     <option name="width" value="1099" />
     <option name="height" value="1093" />
   </component>
@@ -148,6 +148,11 @@
               <item name="quiz-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="quiz-app" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="quiz-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="quiz-app" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -158,6 +163,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -197,18 +203,19 @@
       <workItem from="1587229834669" duration="8852000" />
       <workItem from="1587265856343" duration="4823000" />
       <workItem from="1587430775527" duration="1371000" />
-      <workItem from="1587604388194" duration="210000" />
+      <workItem from="1587604388194" duration="745000" />
+      <workItem from="1587914547397" duration="89000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64954000" />
+    <option name="totallyTimeSpent" value="65578000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="693" y="23" width="1099" height="1093" extended-state="0" />
+    <frame x="551" y="63" width="1099" height="1093" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1513718" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15421003" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -276,6 +283,9 @@
     <entry file="file://$PROJECT_DIR$/composer.lock">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../treehouse-unit-2-master/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
@@ -295,18 +305,15 @@
     </entry>
     <entry file="file:///Applications/MAMP/logs/php_error.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="4983" column="44" lean-forward="true" selection-start-line="4983" selection-start-column="44" selection-end-line="4983" selection-end-column="44" />
+        <state relative-caret-position="74745">
+          <caret line="4983" column="44" selection-start-line="4983" selection-start-column="44" selection-end-line="4983" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../treehouse-unit-2-master/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/inc/quiz.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="44" lean-forward="true" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+        <state relative-caret-position="510">
+          <caret line="34" column="87" selection-start-line="34" selection-start-column="87" selection-end-line="34" selection-end-column="87" />
         </state>
       </provider>
     </entry>
